@@ -22,3 +22,9 @@ def Register_Student(student_list):
     return student_list
 
 
+def Registration_number_generator():
+    import random
+    reg_no = ""
+    for i in range(10):
+        reg_no += str(random.randint(1,8))
+    return reg_no
