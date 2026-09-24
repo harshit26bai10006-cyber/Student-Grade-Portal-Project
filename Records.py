@@ -76,12 +76,12 @@ def Update_Student(student_list):
 
 def Remove_Student(student_list):
 
-    registration_number = input("Enter the registration number of the student")
+    registration_number = input("Enter the registration number of the student: ")
     if registration_number in student_list:
         del student_list[registration_number]
     elif type(registration_number in student_list) == None:
         print("Invalid Registration Number!!")
-        
+    return student_list
         
 
 def Print_Student_Details(student_list):
