@@ -62,7 +62,8 @@ while True:
             elif option3 == 2:
                 choice = int(input("1 : Based on CGPA\n2 : Based on Percentage\n3 : Based on Particular Subject Marks\n0 : Exit\n Enter : "))
                 a =  Analytics.leaderboard(a,choice)
-
+            elif option3 == 0 :
+                break
     elif option == 0:
         break
     
