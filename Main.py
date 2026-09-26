@@ -37,9 +37,24 @@ while True:
                 break
 
     elif option == 2:
-        Grading.add_marks(a)
+        while True:
+            print("Welcome to Student Grading Portal!")
+            option2 = int(input("1 : Add Marks\n2 : View Marks\n3 : Calculate Percentage and CGPA\n4 : Update Marks\n5 : Remove Marks\n0 : Go Back\nEnter : "))
+            if option2 == 1:
+                a = Grading.add_marks(a)
+            elif option2 == 2:
+                a = Grading.view_marks(a)
+            elif option2 == 3:
+                a = Grading.calculate_grades(a)
+            elif option2 == 4:
+                a = Grading.update_marks(a)
+            elif option2 == 5:
+                a = Grading.remove_marks(a)
+            elif option2 == 0:
+                break
+            
 
-    elif option1 == 0:
+    elif option == 0:
         break
     
 

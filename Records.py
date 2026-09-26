@@ -40,7 +40,7 @@ def Update_Student(student_list):
             break
         
         while True:
-            b = int(input("Enter the following to update the information!:\n 1: First Name\n 2: Last Name\n 3: Age\n 4: Course"))
+            b = int(input("Enter the following to update the information!:\n 1: First Name\n 2: Last Name\n 3: Age\n 4: Course\n 5 : Go Back\n Enter : "))
             if b == 1:
                 student_first_name = input("Enter First name of the student: ")
                 a["First Name"] = student_first_name
