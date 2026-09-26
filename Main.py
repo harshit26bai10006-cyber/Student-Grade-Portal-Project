@@ -1,5 +1,7 @@
 import Records
+import Grading
 
+a = {}
 while True:
     print("*-------Welcome to Student Portal-------*")
     print("|                                       |")
@@ -10,7 +12,7 @@ while True:
     print("| 0: Exit                               |")
     print("*---------------------------------------*")
     option = int(input("Enter: "))
-    a = {}
+    
     if option == 1:
         while True:
             print("Select and Enter the numbers shown: ")
@@ -33,6 +35,13 @@ while True:
 
             elif option1 == 0:
                 break
+
+    elif option == 2:
+        Grading.add_marks(a)
+
+    elif option1 == 0:
+        break
+    
 
 
 
