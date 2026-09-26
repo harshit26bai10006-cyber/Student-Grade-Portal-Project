@@ -61,7 +61,7 @@ def calculate_grades(student_list):
     temp = {}
     for a, b in marks.items():
         total += b
-        print(a,":",b)
+    
         if b>=90 and b<=100:
             grade = "S"
             grade_point = 10

@@ -95,6 +95,8 @@ def Print_Student_Details(student_list):
         for keys,values in a.items():
             print(keys,":",values)
 
+    return student_list
+
     
 
 
