@@ -6,11 +6,11 @@ def add_marks(student_list):
     registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Student is not registered!!")
-        return
+        return student_list
     student = student_list[registration_number]
     if student.get("Marks"):
         print("Marks Already Added")
-        return
+        return student_list
         
     course = student.get("Course")
     if  course == "Computer Science and Engineering(CSE)":
@@ -36,24 +36,25 @@ def view_marks(student_list):
     registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Specified Student is not Registered!!")
-        return
+        return student_list
     student = student_list[registration_number]
     if not student.get("Marks"):
         print("Marks Not added of specified Student")
-        return
+        return student_list
     marks = student["Marks"]
     for a, b in marks.items():
         print(a,":",b)
+    return student_list
 
 def calculate_grades(student_list):
     registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Specified Student is not Registered!!")
-        return
+        return student_list
     student = student_list[registration_number]
     if not student.get("Marks"):
         print("Marks Not added of specified Student")
-        return
+        return student_list
     print("*--------------Subject Report-------------*")
     marks = student["Marks"]
     total = 0
@@ -106,11 +107,11 @@ def update_marks(student_list):
     registration_number = input("Enter your Registration Number")
     if registration_number not in student_list:
         print("Specified Student is not Registered!")
-        return
+        return student_list
     student = student_list[registration_number]
     if not student.get("Marks"):
         print("Specified Student's marks not added!!")
-        return
+        return student_list
     marks = student["Marks"]
     for a,b in list(marks.items()):
         mark = input(f"{a} (Current: {b}): ")
@@ -122,11 +123,11 @@ def remove_marks(student_list):
     registration_number = input("Enter your Registration Number")
     if registration_number not in student_list:
         print("Specified Student is not Registered!")
-        return
+        return student_list
     student = student_list[registration_number]
     if not student.get("Marks"):
         print("Specified Student's marks not added!!")
-        return
+        return student_list
     confirm = int(input("Are you sure want to remove the marks of the particular student?\n1 : Yes\n2 : No"))
     if confirm == 1:
         student.pop("Marks", None)
