@@ -58,10 +58,10 @@ while True:
             print("Welcome to Student Analatycal Grades")
             option3 = int(input("1 : View Histogram of your Marks\n2 : View Leaderboard Based upon particular items\n0 : Exit\nEnter : "))
             if option3 == 1:
-                Analytics.Graph_Generator(a)
+                a =  Analytics.Graph_Generator(a)
             elif option3 == 2:
                 choice = int(input("1 : Based on CGPA\n2 : Based on Percentage\n3 : Based on Particular Subject Marks\n0 : Exit\n Enter : "))
-                Analytics.Leaderboard(a,choice)
+                a =  Analytics.leaderboard(a,choice)
 
     elif option == 0:
         break

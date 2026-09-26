@@ -13,7 +13,9 @@ def Graph_Generator(student_list):
     print("".ljust(12),"|_____________________________")
     return student_list
 
-def Leaderboard(student_list,choice):
+def leaderboard(student_list,choice):
+    ranking_manner = "Score"
+    score = 0
     if not student_list:
         print("There are not any Registered Students!")
         return student_list
