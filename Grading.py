@@ -28,6 +28,9 @@ def add_marks(student_list):
     EVS = float(input("Enter the EVS Marks : "))
     Maths = float(input("Enter the Maths Marks : "))
     course_marks = float(input("Enter the Course Subject Marks : "))
+    if (English > 100 or English < 0 or EVS > 100 or EVS < 0 or Maths > 100 or Maths < 0 or course_marks > 100 or course_marks < 0):
+        print("You have entered Invalid Marks!!")
+        return student_list 
     student["Marks"] = {"English" : English, "EVS" : EVS, "Maths" : Maths, course_shorthand : course_marks} 
     print("Marks Successfully Added!!")
     return student_list
@@ -116,7 +119,11 @@ def update_marks(student_list):
     for a,b in list(marks.items()):
         mark = input(f"{a} (Current: {b}): ")
         if mark.strip() != "":
-            marks[a] = float(mark)
+            new_val = float(mark)
+            if new_val > 100 or new_val < 0:
+                print("Invalid range! Keeping previous mark.")
+            else:
+                marks[a] = new_val
     return student_list
 
 def remove_marks(student_list):
