@@ -1,5 +1,5 @@
 def Graph_Generator(student_list):
-    registration_number = input("Enter your Registration Number")
+    registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Specified student not Registered")
         return student_list

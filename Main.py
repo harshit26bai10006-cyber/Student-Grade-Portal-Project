@@ -1,6 +1,7 @@
 import Records
 import Grading
 import Analytics
+import Admin
 a = {}
 while True:
     print("*-------Welcome to Student Portal-------*")
@@ -64,6 +65,9 @@ while True:
                 a =  Analytics.leaderboard(a,choice)
             elif option3 == 0 :
                 break
+
+    elif option == 4:
+        a = Admin.Dashboard(a)
     elif option == 0:
         break
     

@@ -104,7 +104,7 @@ def calculate_grades(student_list):
     return student_list
 
 def update_marks(student_list):
-    registration_number = input("Enter your Registration Number")
+    registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Specified Student is not Registered!")
         return student_list
@@ -120,7 +120,7 @@ def update_marks(student_list):
     return student_list
 
 def remove_marks(student_list):
-    registration_number = input("Enter your Registration Number")
+    registration_number = input("Enter your Registration Number : ")
     if registration_number not in student_list:
         print("Specified Student is not Registered!")
         return student_list
@@ -128,7 +128,7 @@ def remove_marks(student_list):
     if not student.get("Marks"):
         print("Specified Student's marks not added!!")
         return student_list
-    confirm = int(input("Are you sure want to remove the marks of the particular student?\n1 : Yes\n2 : No"))
+    confirm = int(input("Are you sure want to remove the marks of the particular student?\n1 : Yes\n2 : No\nEnter : "))
     if confirm == 1:
         student.pop("Marks", None)
         student.pop("Grades", None)
