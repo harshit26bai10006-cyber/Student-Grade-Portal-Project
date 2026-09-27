@@ -2,6 +2,9 @@ def Register_Student(student_list):
     student_first_name = input("Enter First name of the student: ")
     student_last_name = input("Enter Last name of the student: ")
     student_age = int(input("Enter the age of the student: "))
+    if student_age<17 or student_age >23:
+        print("Invalid Age!")
+        return student_list
     print("Follow the instructions to specify the course of the student - ")
     student_course = int(input("Press :\n 1: Computer Science and Engineering\n 2: Mechanical Engineering\n 3: Chemical Engineering\n 4: Electrical and Electronics Engineering\n 5: Aerospace Engineering\n 0: None of the above\n Enter: "))
     if student_course==1:
@@ -50,6 +53,9 @@ def Update_Student(student_list):
             elif b == 3:
                 student_age = int(input("Enter the age of the student: "))
                 a["Age"] = student_age
+                if student_age<17 or student_age >23:
+                    print("Invalid Age!")
+                    return student_list
             elif b == 4:
                 print("Follow the instructions to specify the course of the student - ")
                 student_course = int(input("Press :\n 1: Computer Science and Engineering\n 2: Mechanical Engineering\n 3: Chemical Engineering\n 4: Electrical and Electronics Engineering\n 5: Aerospace Engineering\n 0: None of the above\n Enter: "))
